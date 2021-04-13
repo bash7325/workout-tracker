@@ -5,11 +5,11 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  app.get("/exercise", function (req, res) {
+  app.get("/exercise",  (req, res) => {
     res.sendFile(path.join(__dirname, "../public/exercise.html"));
   });
 
-  app.get("/stats", function (req, res) {
+  app.get("/stats", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/stats.html"));
   });
 };
