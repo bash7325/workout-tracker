@@ -15,8 +15,8 @@ mongoose.connect(
   { useNewUrlParser: true, useFindAndModify: false }
 );
 
-app.use(require("./routes/api-routes"));
-app.use(require("./routes/html-routes"));
+require("./routes/html-routes")(app);
+require("./routes/api-routes")(app);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}..`);
