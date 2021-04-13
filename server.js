@@ -5,8 +5,6 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(logger("dev"));
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -17,8 +15,8 @@ mongoose.connect(
   { useNewUrlParser: true, useFindAndModify: false }
 );
 
-require("./workout-tracker/routes/api-routes")(app);
-require("./workout-tracker/routes/html-routes")(app);
+app.use(require("./routes/api-routes"));
+app.use(require("./routes/html-routes"));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}..`);
