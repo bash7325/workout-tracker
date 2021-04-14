@@ -11,7 +11,7 @@ module.exports = (app) => {
         res.status(400).json(err);
       });
   });
-  // get info for the range page
+  // aggregate info for the range page and graphs
   app.get("/api/workouts/range", (req, res) => {
     db.Workout.aggregate([
       {
