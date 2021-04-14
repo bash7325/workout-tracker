@@ -3,9 +3,11 @@
 
 # Workout Tracker
 
-An application to track your daily workouts.
+- An application to track your daily workouts.
 
 # Deployed Link
+
+- [Workout Tracker](https://mighty-temple-37148.herokuapp.com/?id=607774cf52044f0015ab84c7)
 
 # Criteria Met
 - Application allows user to add exercises to a new and recent workout plan.
